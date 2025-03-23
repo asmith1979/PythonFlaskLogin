@@ -5,7 +5,6 @@
 
 from flask import Flask, render_template, request, redirect, url_for
 import hashlib
-import oracledb
 
 userData = []
 

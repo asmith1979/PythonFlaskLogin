@@ -1,7 +1,7 @@
 # Script: UserAdmin.py
 # Author: Andrew Smith
 # Date: September 2024
-# Description: User Admin functionality of RSP Admin console
+# Description: User Administration back-end functionality
 
 import random
 
