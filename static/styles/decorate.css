@@ -1,0 +1,16 @@
+/* Login area rectangle */
+#rectangle{
+    width:800px;
+    height:300px;
+    background:#e6edfc;
+	border-radius: 25px;
+}
+
+/* Dashboard area rectangle */
+#dashrectangle{
+    width:1600px;
+    height:600px;
+    background:#e6edfc;
+	border-radius: 25px;
+}
+

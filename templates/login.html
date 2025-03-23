@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <title>Administration Portal</title>
+	<link rel= "stylesheet" type= "text/css" href= "/static/styles/decorate.css">
+	<script src="/static/styles/loginpage.js"></script>
+  </head>
+  <body>
+		</br></br></br>
+		<center><img src="/static/squirrel.png" alt="NHS England"></center>
+		<center><h1>Administration Portal</h1></center>
+		<center><div id="rectangle">
+		<form action="/" method="POST">
+		<div>
+			<b><label for="useremail" style="font-size:18px; position:relative; left:200px; top:10px;">EMAIL ADDRESS</label></b>
+			<input type="text" id="useremail" name="useremail" required style="width:400px; height:50px; position:relative; left:-80px; top:60px; border-radius: 25px; text-align:center; background-color:white;">
+		</div>
+		<div>
+			<b><label for="password" style="font-size:18px; position:relative; left:200px; top:60px;">PASSWORD</label></b>
+			<input type="password" id="password" name="password" required style="width:400px; height:50px; position:relative; left:-60px; top:110px; border-radius: 25px; text-align:center;">
+		</div>
+		
+		<div>
+		
+		<input type="submit" value="" style="position:relative; border-radius: 25px; width:100px; height:50px; left:0px; top: 120px; background-image: url('/static/loginicon.png'); cursor:pointer">
+		
+		
+		
+		</div>
+		
+		<a href="/forgotpassword" style="position:relative; left:320px; top:100px;">Forgot Password</a>
+		
+		</form>
+		</div></center>
+		
+		<center><div class="msg" style="color:red;">{{ msg }}</div></center>
+  </body>
+</<html>
