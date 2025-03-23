@@ -22,3 +22,6 @@ Experiments with Dashboard app concept (under construction)
 Email Address: mel.gibson@mycompany.com</br>
 Password: WorldH3llo
 
+</br></br>
+<i>Further logins can be found by cross-referencing userData in mainpage.py with EncryptedPasswordList.txt found in folder userdata </i>
+
