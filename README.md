@@ -14,3 +14,11 @@ Experiments with Dashboard app concept (under construction)
 </br></br>
 <i>* Further devleopment of other screens and administration functionality</i>
 
+</br></br>
+<b>NOTES:</b>
+</br></br>
+
+<i>To login for demonstration use the following:</i></br>
+Email Address: mel.gibson@mycompany.com</br>
+Password: WorldH3llo
+
