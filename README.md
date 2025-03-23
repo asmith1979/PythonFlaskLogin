@@ -1,9 +1,14 @@
 # Python Login and Dashboard test
 
+*** WORK IN PROGRESS ***
+
+<img src="screenshot.jpg" alt="Italian Trulli"></br></br>
+
 Experiments with user login authentication using MD5 Hash encryption
 
-Experiments with Dashboard app concept
+Experiments with Dashboard app concept (under construction)
 
-JSON data layer (needs implementing) implemented for example use instead of DB connection
+<b>TODO:</b>
 
-NHS Logo's need removing
+<i>JSON data layer (needs implementing) implemented for example use instead of DB connection</i>
+
