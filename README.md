@@ -1,6 +1,6 @@
 # Python Login and Dashboard test
 
-*** WORK IN PROGRESS ***
+<center>*** WORK IN PROGRESS ***</center>
 
 <img src="screenshot.jpg" alt="Italian Trulli"></br></br>
 
@@ -10,5 +10,6 @@ Experiments with Dashboard app concept (under construction)
 
 <b>TODO:</b>
 
-<i>JSON data layer (needs implementing) implemented for example use instead of DB connection</i>
+<i>* JSON data layer (needs implementing) implemented for example use instead of DB connection</i>
+<i>* Error checking of input fields for email and password</i>
 
