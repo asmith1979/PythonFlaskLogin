@@ -67,9 +67,7 @@ def authoriseUserLogin(userIn, passwordIn):
         
         if encUserPassword == storedEncryptedPassword:
             authorisedLogin = True
-    
-    # flask --app C:\Users\ANSM6\Documents\WorkStuff\PythonDev\mainpage.py run
-    
+
     return authorisedLogin
     
 @app.route("/forgotpassword", methods =["GET", "POST"])

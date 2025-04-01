@@ -5,6 +5,8 @@
 
 import random
 
+# Function: generatePassword
+# Description: Generates a secure password
 def generatePassword():
     genPassword = "12345678"
     
