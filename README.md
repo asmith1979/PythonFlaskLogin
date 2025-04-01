@@ -23,5 +23,9 @@ Email Address: mel.gibson@mycompany.com</br>
 Password: WorldH3llo
 
 </br>
+<b>To run the program flask --app mainpage.py run</b>
+</br>
+
+</br>
 <i><b>Further logins can be found by cross-referencing userData in mainpage.py with EncryptedPasswordList.txt found in folder userdata</b></i>
 
