@@ -42,7 +42,8 @@ def login():
         return render_template('login.html', msg=msg)
     
     return render_template('login.html')
-    
+
+# A function used to authorise user login     
 def authoriseUserLogin(userIn, passwordIn):
     # Make user data accessible
     global userData
