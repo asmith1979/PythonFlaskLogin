@@ -41,14 +41,7 @@ def login():
             msg = ""
             return render_template('dashboard.html', msg=msg)
 
-<<<<<<< HEAD
     return render_template('login.html', msg=msg)
-=======
-        msg = ""
-        return render_template('login.html', msg=msg)
-    
-    return render_template('login.html')
->>>>>>> a7a76c882d9f55a49c27e8741a63e6c0b588fe22
 
 # A function used to authorise user login     
 def authoriseUserLogin(userIn, passwordIn):
