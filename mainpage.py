@@ -22,26 +22,26 @@ userData.append([10,"adam.sandler@mycompany.com", "b53116f942177afdf4bfa41fb87eb
 
 app = Flask(__name__)
 
-@app.route("/", methods =["GET", "POST"])
+# Route for handling the login page logic
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == "POST":
+    msg = ""
+    if request.method == 'POST':
+        
         # getting input with name = fname in HTML form
         userName = request.form.get("useremail")
         # getting input with name = lname in HTML form 
-        userPassword = request.form.get("password")        
-       
+        userPassword = request.form.get("password")    
+        
+        # Check for invalid login 
         if authoriseUserLogin(userName,userPassword) == False:
-            msg = "Invalid Login Details"
-            return render_template('login.html', msg=msg)
-            
-        if authoriseUserLogin(userName,userPassword) == True:
+            msg = 'Invalid Login Details'
+            render_template('login.html', msg=msg)
+        else:
             msg = ""
-            return render_template('dashboard.html', msg=msg)      
+            return render_template('dashboard.html', msg=msg)
 
-        msg = ""
-        return render_template('login.html', msg=msg)
-    
-    return render_template('login.html')
+    return render_template('login.html', msg=msg)
 
 # A function used to authorise user login     
 def authoriseUserLogin(userIn, passwordIn):
@@ -79,3 +79,6 @@ def forgotPassword():
 @app.route("/dashboard", methods =["GET", "POST"])
 def dashboard():
     return render_template('dashboard.html')
+    
+if __name__ == '__main__':
+    app.run()
