@@ -70,12 +70,13 @@ def authoriseUserLogin(userIn, passwordIn):
             authorisedLogin = True
 
     return authorisedLogin
-    
+
+# Forgot password     
 @app.route("/forgotpassword", methods =["GET", "POST"])
 def forgotPassword():
     return render_template('forgotpass.html')
     
-    
+# Dashboard app     
 @app.route("/dashboard", methods =["GET", "POST"])
 def dashboard():
     return render_template('dashboard.html')
