@@ -12,7 +12,7 @@ Experiments with Dashboard app concept (under construction)
 </br></br>
 <b>NOTES:</b>
 </br></br>
-<b><i>A temporary data set of users has been implemented in Python to substitute a database</i></b></br></br>
+<b><i>A data set of users has been implemented in Python to substitute a SQL database</i></b></br></br>
 
 <i>To login for demonstration use the following:</i></br></br>
 Email Address: mel.gibson@mycompany.com</br>
