@@ -19,7 +19,7 @@ Email Address: mel.gibson@mycompany.com</br>
 Password: WorldH3llo
 
 </br>
-<b>To run the program type.......<i>flask --app mainpage.py run</i></b>
+<b>To run the program type: <i>flask --app mainpage.py run</i></b>
 </br>
 
 </br>
