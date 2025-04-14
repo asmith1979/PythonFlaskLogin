@@ -8,7 +8,7 @@ Experiments with Dashboard app concept (under construction)
 
 <b>TODO:</b></br></br>
 <i>* Further devleopment of other screens and administration functionality</i>
-</br>
+</br></br>
 <b>NOTES:</b>
 </br>
 
