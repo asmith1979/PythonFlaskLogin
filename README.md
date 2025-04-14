@@ -6,10 +6,9 @@ Experiments with user login authentication using MD5 Hash encryption
 
 Experiments with Dashboard app concept (under construction)
 
-<b>TODO:</b></br>
+<b>TODO:</b></br></br>
 <i>* Further devleopment of other screens and administration functionality</i>
-
-</br></br>
+</br>
 <b>NOTES:</b>
 </br>
 
