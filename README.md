@@ -1,4 +1,4 @@
-# Python Login and Dashboard </br></br>*** WORK IN PROGRESS ***
+# Python Login and Dashboard </br></br><center>*** WORK IN PROGRESS ***</center>
 </br></br>
 <img src="screenshot.jpg" alt="Italian Trulli"></br></br>
 
