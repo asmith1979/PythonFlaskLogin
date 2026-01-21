@@ -52,7 +52,7 @@ def forgotPassword():
             msg = "No Email Address Found"
             return render_template('forgotpass.html', msg=msg)
         else:
-            msg = "Email Address Found"
+            msg = ("A new user password has been emailed to " +userEmailAddress)
             return render_template('forgotpass.html', msg=msg)
     
     return render_template('forgotpass.html', msg=msg)

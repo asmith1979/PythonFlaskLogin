@@ -125,6 +125,28 @@ def getUserEmailAddress(emailAddressIn):
 def forgotPassword(emailAddressIn):
     # Detect if email address is in the data store to send
     emailAddr = getUserEmailAddress(emailAddressIn)
+    newUserPassword = ""
+    
+    # Generate password if email address exists in userData 
+    if emailAddr != "":
+        newUserPassword = generatePassword()
+        
+        # Encrypt password to MD5 Hash 
+        encryptedResult = hashlib.md5(newUserPassword.encode())
+        encryptedPassword = encryptedResult.hexdigest()
+        
+        # Update encrypted password in the data store 
+        recordNo = 0
+        dataStoreLength = len(userData)
+    
+        while recordNo < (dataStoreLength-1):
+            if userData[recordNo][1] == emailAddr:
+                userData[recordNo][2] = encryptedPassword
+                break    
+            
+            recordNo = recordNo + 1        
+    
+        print("New Password for " + emailAddr + " is " + newUserPassword)
     
     return emailAddr
 
