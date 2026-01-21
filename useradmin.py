@@ -111,7 +111,7 @@ def getUserEmailAddress(emailAddressIn):
     recordNo = 0
     dataStoreLength = len(userData)
     
-    while recordNo < (dataStoreLength-1):
+    while recordNo < (dataStoreLength):
         if userData[recordNo][1] == emailAddressIn:
             emailAddressReturn = userData[recordNo][1]
             break    
@@ -139,7 +139,7 @@ def forgotPassword(emailAddressIn):
         recordNo = 0
         dataStoreLength = len(userData)
     
-        while recordNo < (dataStoreLength-1):
+        while recordNo < (dataStoreLength):
             if userData[recordNo][1] == emailAddr:
                 userData[recordNo][2] = encryptedPassword
                 break    
