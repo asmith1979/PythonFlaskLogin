@@ -1,6 +1,5 @@
 # Python Login and Dashboard 
 </br></br>
-<b><h1><center>*** Work in Progress ***</center></h1></b>
 <img src="screenshot.jpg" alt="Italian Trulli"></br></br>
 <b>DESCRIPTION: </b></br></br>
 Experiments with user login authentication using MD5 Hash encryption
