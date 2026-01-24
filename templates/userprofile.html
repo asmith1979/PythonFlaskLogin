@@ -1,0 +1,93 @@
+<!--
+
+	Page: dashboard.html
+	Author: Andrew Smith
+	Date: April 2025
+	Description: Dashboard app (under construction)
+
+-->
+
+<html>
+  <head>    
+    <title>Administration Portal - Dashboard</title>
+	<link rel= "stylesheet" type= "text/css" href= "/static/styles/decorate.css">
+	<script src="/static/styles/loginpage.js"></script>
+  </head>
+  <body>
+		</br></br></br>
+		<center><img src="/static/squirrel.png" alt="Squirrel Pic"></center>
+		<center><h1>Administration Console - User Profile</h1></center>
+		<center><div id="dashrectangle" style="position:relative; left:0px;">
+		
+			<!-- Logout Button -->
+			<button type="button" onclick="location.href = '/dashboard';" style="position:relative; background-image: url('/static/back.png'); width:100px; height:50px; left:0px; top:0px; float:right; border-radius: 25px; cursor:pointer;"></button>
+			
+			<!-- Position User Details in a div -->
+			<div id="userdetailsrectangle" style="position:relative; left:0px; top:100px;">
+			
+				<!-- User Title -->
+				<div id="userdetailrect" style="position:relative; left:0px; top:25px; text-align: left; font-size: 20px;">
+			
+					<!-- Output Title of User -->					
+					<b>TITLE: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{ title }}</b>
+			
+				</div>
+				
+				<!-- User Surname -->
+				<div id ="userdetailrect" style="position:relative; left:0px; top:35px; text-align: left; font-size: 20px;">
+			
+					<!-- Output Surname of User -->					
+					<b>SURNAME: &emsp;&emsp;&emsp;&emsp; {{ surname }}</b>
+			
+				</div>
+				
+				<!-- User Firstname -->
+				<div id="userdetailrect" style="position:relative; left:0px; top:45px; text-align: left; font-size: 20px;">
+				
+					<!-- Output firstname of user -->
+					<b>FIRSTNAME: &emsp;&emsp;&emsp; {{ firstname }}</b>
+				
+				</div>
+				
+				<!-- Security level of user -->
+				<div id="userdetailrect" style="position:relative; left:0px; top:55px; text-align: left; font-size: 20px;">
+				
+					<!-- Output Security level of User -->
+					<b>SECURITY LEVEL: &nbsp; {{ seclevel }}</b>
+				
+				</div>
+				
+				<!-- Status of Account -->
+				<div id="userdetailrect" style="position:relative; left:0px; top:65px; text-align: left; font-size: 20px;">
+				
+					
+					<p style="position:relative; left:200px;top:3px; color: {{ 'green' if accountstatus == 'ACTIVE' else 'red' }}">
+						<!-- Output status of account (Active / InActive) -->
+						<b>{{ accountstatus }}</b>
+					</p>
+					
+					<p style="position:relative; left:0px; top:-40px;">
+						<b>ACCOUNT STATUS: </b>
+					</p>
+				
+				</div>
+				
+				<!-- Date the Account was created -->
+				<div id="userdetailrect" style="position:relative; left:0px; top:75px; text-align: left; font-size: 20px;">
+				
+					<!-- Output the date was created -->
+					<b>DATE CREATED: &emsp; &nbsp;{{ datecreated }}</b>
+				
+				</div>
+				
+				
+			
+			</div>
+			<img src="{{ photo }}" alt="Profile picture" style="position:relative;left:-550px;top:-250px;">
+			
+		
+		</div></center>
+		</br></br>
+		<center><div class="msg" style="color:green; font-weight:bold;">{{ msg }}</div></center>
+  </body>
+</<html>

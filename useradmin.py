@@ -14,20 +14,156 @@ from datetime import datetime
 userData = []
 
 # Add User Data for Demonstration purpose
-userData.append([1,"mel.gibson@mycompany.com", "b1de3dec47fd10a41669145570df961d", "Gibson", "Mel", "Mr", "077892456789", True, "03/23/2025", "SUPERADMIN"])
-userData.append([2,"sly.stallone@mycompany.com", "b9eb312c6b776285dab43253df7c2c40", "Stallone", "Sly", "Mr", "079945646664", True, "03/23/2025", "SUPERADMIN"])
-userData.append([3,"nicole.kidman@mycompany.com", "9c1d10fff0a08054dc4c808cd5ae8223", "Kidman", "Nicole", "Miss", "0749665223", False, "03/23/2025", "ADMIN"])
-userData.append([4,"angelina.jolie@mycompany.com", "23915be13492eec1f39eacf8456574fc", "Jolie", "Angelina", "Miss", "0771233333", False, "03/23/2025", "ADMIN"])
-userData.append([5,"john.travolta@mycompany.com", "0aaca691d1c853b17178c0ddda077796", "Travolta", "John", "Mr", "07749888999", False, "03/23/2025", "ADMIN"])
-userData.append([6,"sandra.bullock@mycompany.com", "ff8062c7a0ceee303cf593309fca1b6b", "Bullock", "Sandra", "Miss", "079945512", False, "03/23/2025", "ADMIN"])
-userData.append([7,"harrison.ford@mycompany.com", "b0dfcdfb749fb18159e2d61ead5f5e14", "Ford", "Harrison", "Mr", "07723478888", True, "03/23/2025", "STANDARD"])
-userData.append([8,"ben.stiller@mycompany.com", "9bb374323c1860b999a403150d5de424", "Stiller", "Ben", "Mr", "079487789777", False, "03/23/2025", "STANDARD"])
-userData.append([9,"chris.pratt@mycompany.com", "4f76aedd9220999a5731885ddcf51733", "Pratt", "Chris", "Mr", "0773574199", False, "03/23/2025", "STANDARD"])
-userData.append([10,"adam.sandler@mycompany.com", "b53116f942177afdf4bfa41fb87ebc6c", "Sandler", "Adam", "Mr", "07900886677", False, "03/23/2025", "STANDARD"])
+userData.append([1,"mel.gibson@mycompany.com", "b1de3dec47fd10a41669145570df961d", "Gibson", "Mel", "Mr", "077892456789", True, "03/23/2025", "SUPERADMIN", "melgibson.jpg"])
+userData.append([2,"sly.stallone@mycompany.com", "b9eb312c6b776285dab43253df7c2c40", "Stallone", "Sly", "Mr", "079945646664", True, "03/23/2025", "SUPERADMIN", ""])
+userData.append([3,"nicole.kidman@mycompany.com", "9c1d10fff0a08054dc4c808cd5ae8223", "Kidman", "Nicole", "Miss", "0749665223", False, "03/23/2025", "ADMIN", ""])
+userData.append([4,"angelina.jolie@mycompany.com", "23915be13492eec1f39eacf8456574fc", "Jolie", "Angelina", "Miss", "0771233333", False, "03/23/2025", "ADMIN", ""])
+userData.append([5,"john.travolta@mycompany.com", "0aaca691d1c853b17178c0ddda077796", "Travolta", "John", "Mr", "07749888999", False, "03/23/2025", "ADMIN", ""])
+userData.append([6,"sandra.bullock@mycompany.com", "ff8062c7a0ceee303cf593309fca1b6b", "Bullock", "Sandra", "Miss", "079945512", False, "03/23/2025", "ADMIN", ""])
+userData.append([7,"harrison.ford@mycompany.com", "b0dfcdfb749fb18159e2d61ead5f5e14", "Ford", "Harrison", "Mr", "07723478888", True, "03/23/2025", "STANDARD", ""])
+userData.append([8,"ben.stiller@mycompany.com", "9bb374323c1860b999a403150d5de424", "Stiller", "Ben", "Mr", "079487789777", False, "03/23/2025", "STANDARD", ""])
+userData.append([9,"chris.pratt@mycompany.com", "4f76aedd9220999a5731885ddcf51733", "Pratt", "Chris", "Mr", "0773574199", False, "03/23/2025", "STANDARD", ""])
+userData.append([10,"adam.sandler@mycompany.com", "b53116f942177afdf4bfa41fb87ebc6c", "Sandler", "Adam", "Mr", "07900886677", False, "03/23/2025", "STANDARD", ""])
 
 ##############################################
 ###  Private Back-end admin functionality  ###
 ##############################################
+
+def getPhotoFromEmail(emailAddressIn):
+    global userData
+    emailFound = False
+    indexCounter = 0
+    photoReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            photoReturn = userData[indexCounter][10]
+            break 
+            
+        indexCounter = indexCounter + 1
+    
+    return photoReturn 
+
+# Function: getDateCreatedFromEmail 
+# Description: A function that gets the date the account was created 
+def getDateCreatedFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    dateReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            dateReturn = userData[indexCounter][8]
+            break 
+            
+        indexCounter = indexCounter + 1
+        
+    return dateReturn 
+
+# Function: getTitleFromEmail 
+# Description: A function that will return the title based on the email address provided
+def getTitleFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    titleReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            titleReturn = userData[indexCounter][5]
+            break 
+            
+        indexCounter = indexCounter + 1
+        
+    return titleReturn 
+
+# Function: getSurnameFromEmail
+# Description: A function that will return a Surname from given email address 
+def getSurnameFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    surnameReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            surnameReturn = userData[indexCounter][3]
+            break 
+            
+        indexCounter = indexCounter + 1
+    
+    return surnameReturn 
+    
+# Function: getSurnameFromEmail
+# Description: A function that will return a First-name from given email address 
+def getFirstnameFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    firstNameReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            firstNameReturn = userData[indexCounter][4]
+            break 
+            
+        indexCounter = indexCounter + 1
+    
+    return firstNameReturn 
+
+# Function: getPermissionLevelFromEmail
+# Description: A function that returns the permission level from Email Address provided     
+def getPermissionLevelFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    permissionLevelReturn = ""
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            permissionLevelReturn = userData[indexCounter][9]
+            break 
+            
+        indexCounter = indexCounter + 1
+        
+    # Return the permission level 
+    return permissionLevelReturn
+
+# Function: getStatusFromEmail
+# Description: A function that returns the status of a user account based on email provided     
+# Return Value: True - Active Status, False - In-Active Status 
+def getStatusFromEmail(emailAddressIn):
+    global userData 
+    emailFound = False 
+    indexCounter = 0
+    statusReturn = False
+    
+    # Check to see if email address is found in the user store     
+    while indexCounter < len(userData):
+        if userData[indexCounter][1] == emailAddressIn:
+            emailFound = True 
+            statusReturn = userData[indexCounter][7]
+            break 
+            
+        indexCounter = indexCounter + 1    
+    
+    # Return the status 
+    return statusReturn 
+    
+    
 
 # Function: generatePassword
 # Description: Generates a secure password
@@ -183,7 +319,7 @@ def addUserToDataStore(emailAddressIn, surnameIn, firstnameIn, titleIn, phoneNoI
     # print("Date Time: " + formattedNowDateTime)
     
     # Add New User details to the user data store 
-    userData.append([newUserID, emailAddressIn, encryptedPassword, surnameIn, firstnameIn, titleIn, phoneNoIn, activeIn, formattedNowDateTime, userAccountTypeIn])
+    userData.append([newUserID, emailAddressIn, encryptedPassword, surnameIn, firstnameIn, titleIn, phoneNoIn, activeIn, formattedNowDateTime, userAccountTypeIn, ""])
     
     
 

@@ -67,6 +67,33 @@ def dashboard():
         msg = 'You need to login'
         # return render_template('login.html', msg=msg)
         return redirect(url_for('login'))
-    
+
+# User Profile Page     
+@app.route("/userprofile", methods=["GET", "POST"])
+def userProfile():
+    if 'useremail' in session:
+        accountstatus = ""
+        msg = ("You are logged in as " + session['useremail'])
+        title = (user_admin.getTitleFromEmail(session['useremail']))
+        surname = (user_admin.getSurnameFromEmail(session['useremail']))   
+        firstname = (user_admin.getFirstnameFromEmail(session['useremail']))
+        seclevel = (user_admin.getPermissionLevelFromEmail(session['useremail']))
+        photo = ("/static/")
+        image = user_admin.getPhotoFromEmail(session['useremail'])
+        if image != "":
+            photo = (photo+image)
+        else:
+            photo = (photo+"noimage.jpg")
+        if user_admin.getStatusFromEmail(session['useremail']) == True:
+            accountstatus = "ACTIVE"
+        else:
+            accountstatus = "INACTIVE"
+        datecreated = user_admin.getDateCreatedFromEmail(session['useremail'])
+            
+        return render_template('userprofile.html', msg=msg, title=title, surname=surname, firstname=firstname, seclevel=seclevel, accountstatus=accountstatus, datecreated=datecreated, photo=photo)
+    else:
+        msg = 'You need to login'
+        return redirect(url_for('login'))
+
 if __name__ == '__main__':
     app.run()

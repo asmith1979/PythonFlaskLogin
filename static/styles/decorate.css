@@ -1,3 +1,12 @@
+/*
+
+	File: decorate.css
+	Author: Andrew Smith
+	Date: January 2026
+	Description: This is the main CSS file used for the dashboard app 
+
+*/
+
 /* Login area rectangle */
 #rectangle{
     width:800px;
@@ -13,4 +22,19 @@
     background:#e6edfc;
 	border-radius: 25px;
 }
+
+/* User Details area rectangle */
+#userdetailsrectangle{
+    width:800px;
+    height:300px;
+    background:#d1d1e0;
+	border-radius: 25px;
+}
+
+/* Individual user detail - Surname (for example) */
+#userdetailrect {
+	width:350px;
+	height:30px;
+	background:#80bfff;
+	border-radius: 0px;
 
