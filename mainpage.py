@@ -28,12 +28,12 @@ def login():
         session['useremail'] = request.form['useremail']
         print(dict(session))
         
-        # Check for invalid login 
-        if user_admin.authoriseUserLogin(userName,userPassword) == False:
+        # Check for invalid login        
+        if user_admin.authoriseUserLogin(userName,userPassword) == False or user_admin.getStatusFromEmail(userName) == False:
             msg = 'Invalid Login Details'
-            session.pop('useremail', None)
+            session.pop('useremail', None)            
             return render_template('login.html', msg=msg)
-        else:
+        else:            
             msg = ""
             return render_template('dashboard.html', msg=msg)
 
@@ -78,12 +78,12 @@ def userProfile():
         surname = (user_admin.getSurnameFromEmail(session['useremail']))   
         firstname = (user_admin.getFirstnameFromEmail(session['useremail']))
         seclevel = (user_admin.getPermissionLevelFromEmail(session['useremail']))
-        photo = ("/static/")
+        photo = ("/static/profileimg/")
         image = user_admin.getPhotoFromEmail(session['useremail'])
         if image != "":
             photo = (photo+image)
         else:
-            photo = (photo+"noimage.jpg")
+            photo = (photo+"noprofileimg.png")
         if user_admin.getStatusFromEmail(session['useremail']) == True:
             accountstatus = "ACTIVE"
         else:

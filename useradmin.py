@@ -29,6 +29,8 @@ userData.append([10,"adam.sandler@mycompany.com", "b53116f942177afdf4bfa41fb87eb
 ###  Private Back-end admin functionality  ###
 ##############################################
 
+# Function: getPhotoFromEmail 
+# Description: A function that gets the photo from the email address passed in
 def getPhotoFromEmail(emailAddressIn):
     global userData
     emailFound = False
